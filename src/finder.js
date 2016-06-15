@@ -17,7 +17,7 @@ module.exports = ( input, test ) => {
   let output = [];
   for (let i = 0; i < input.length; i++) {
     let currentVal = input[i];
-    if(test(currentVal) && typeof currentVal !== 'object') {
+    if (test(currentVal) && typeof currentVal !== 'object') {
       output.push(currentVal);
     }
   }

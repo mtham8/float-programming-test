@@ -23,8 +23,8 @@
 module.exports = ( input ) => {
   let stack = [];
   for (let i in input) {
-    if(input[i] === '(') stack.push(input[i]);
-    if(input[i] === ')') stack.pop();
+    if (input[i] === '(') stack.push(input[i]);
+    if (input[i] === ')') stack.pop();
   }
   return stack.length === 0;
 };
