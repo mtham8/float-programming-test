@@ -19,3 +19,14 @@ test( 'FINDER: finds strings that start with a', t => {
     t.deepEqual( result, [ 'ant', 'allegory' ], 'result is correct' );
     t.end();
 } );
+
+test( 'FINDER: finds strings that start with b', t => {
+    const input = [ 'ant', 'baby', [ 'apple', 'banana', 'carrot' ], {
+        foo: 'aardvark'
+    }, 'allegory' ];
+    const result = fpt.finder( input, value => /^b/i.test( value ) );
+
+    t.ok( result, 'generated a result' );
+    t.deepEqual( result, [ 'baby'], 'result is correct' );
+    t.end();
+} );
